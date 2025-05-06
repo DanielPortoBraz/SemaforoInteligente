@@ -1,6 +1,6 @@
 # 🚦 Semáforo Inteligente
 
-Projeto de um sistema embarcado que simula um semáforo inteligente com dois modos de operação: **normal** e **noturno**, utilizando o Raspberry Pi Pico e LEDs WS2812B.
+Projeto de um sistema embarcado que simula um semáforo inteligente com dois modos de operação: **normal** e **noturno**, utilizando o Raspberry Pi Pico e periféricos da placa BitDogLab.
 
 ---
 
@@ -9,7 +9,7 @@ Projeto de um sistema embarcado que simula um semáforo inteligente com dois mod
 O sistema alterna entre dois modos de funcionamento:
 
 - **Modo Normal**: alternância entre verde, amarelo e vermelho com tempos fixos.
-- **Modo Noturno**: alternância entre vermelho e amarelo piscante, simulando menor fluxo de tráfego.
+- **Modo Noturno**: cor amarela piscante, simulando menor fluxo de tráfego.
 
 ---
 
@@ -18,6 +18,7 @@ O sistema alterna entre dois modos de funcionamento:
 - Implementar controle de tempo e modos em um semáforo.
 - Utilizar periféricos de I/O programáveis (PIO) para controle de LEDs endereçáveis.
 - Aplicar lógica embarcada com o Raspberry Pi Pico.
+- Aplicar conceitos de programação orientada a RTOS.
 
 ---
 
@@ -25,7 +26,6 @@ O sistema alterna entre dois modos de funcionamento:
 
 - Linguagem: C (Pico SDK)
 - Microcontrolador: Raspberry Pi Pico
-- LEDs WS2812B (endereçáveis)
 - PIO (Programável Input/Output) para controle dos LEDs
 - Build System: CMake
 
@@ -37,7 +37,7 @@ O sistema alterna entre dois modos de funcionamento:
 SemaforoInteligente/
 ├── .vscode/                 # Configurações para o VSCode
 ├── build/                   # Diretório de build (gerado após compilação)
-├── lib/                     # Bibliotecas auxiliares (se houver)
+├── lib/                     # Bibliotecas auxiliares
 ├── ws2818b.pio              # Código PIO para LEDs WS2812B
 ├── SemaforoInteligente.c    # Lógica principal do semáforo
 ├── CMakeLists.txt           # Configuração do CMake
